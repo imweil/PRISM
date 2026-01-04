@@ -316,12 +316,12 @@ export default function Profile({ author, social, features, researchInterests }:
             {/* Visitor Map - 新增部分 */}
             <div className="flex justify-center">
                 <a
-                    href="https://clustrmaps.com/site/1c6ry"
+                    href="https://clustrmaps.com/site/1c8uz"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <img
-                        src="//clustrmaps.com/map_v2.png?cl=080808&w=150&t=n&d=fgXsumJl_Ly9_x6WACyHmXYH7yCRNNa2Zi1Z5bkDLUI&co=ffffff&ct=808080"
+                        src="//clustrmaps.com/map_v2.png?cl=080808&w=150&t=n&d=L5cvFDyPc0LMee-O4l3B-ELqeYkMnT8UBniQPYGf6Yk&co=ffffff&ct=808080"
                         alt="Visitor Map"
                         className="w-full max-w-[320px] rounded-md"
                     />
