@@ -41,6 +41,7 @@ export default function Profile({ author, social, features, researchInterests }:
     const [isAddressPinned, setIsAddressPinned] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
+    const [emailCopied, setEmailCopied] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
     
     // Check local storage for user's like status
@@ -52,6 +53,41 @@ export default function Profile({ author, social, features, researchInterests }:
             setHasLiked(true);
         }
     }, [features.enable_likes]);
+
+    // Email handling (supports either full email or local-part only)
+    const siteDomain = typeof window !== 'undefined'
+        ? window.location.hostname.replace(/^www\./, '')
+        : '';
+
+    const fullEmail = social.email
+        ? (social.email.includes('@') ? social.email : `${social.email}@${siteDomain}`)
+        : '';
+
+    const displayEmail = fullEmail
+        ? fullEmail.replace('@', ' [at] ').replace(/\./g, ' [dot] ')
+        : '';
+
+    const copyEmail = async () => {
+        if (!fullEmail) return;
+        try {
+            await navigator.clipboard.writeText(fullEmail);
+            setEmailCopied(true);
+            setTimeout(() => setEmailCopied(false), 1500);
+        } catch {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = fullEmail;
+            textarea.style.position = 'fixed';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            setEmailCopied(true);
+            setTimeout(() => setEmailCopied(false), 1500);
+        }
+    };
 
     const handleLike = () => {
         const newLikedState = !hasLiked;
@@ -70,7 +106,6 @@ export default function Profile({ author, social, features, researchInterests }:
     const socialLinks = [
         ...(social.email ? [{
             name: 'Email',
-            href: `mailto:${social.email}`,
             icon: EnvelopeIcon,
             isEmail: true,
         }] : []),
@@ -267,16 +302,17 @@ export default function Profile({ author, social, features, researchInterests }:
                                                         </div>
                                                     )}
                                                 </div>
-                                                <p className="break-words">{social.email?.replace('@', ' (at) ')}</p>
+                                                {displayEmail && <p className="break-words">{displayEmail}</p>}
                                                 <div className="mt-2">
-                                                    <a
-                                                        href={link.href}
+                                                    <button
+                                                        type="button"
+                                                        onClick={copyEmail}
                                                         className="inline-flex items-center justify-center space-x-2 bg-accent hover:bg-accent-dark text-white px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
                                                     >
                                                         <EnvelopeIcon className="h-4 w-4" />
-                                                        <span className="sm:hidden">Send</span>
-                                                        <span className="hidden sm:inline">Send Email</span>
-                                                    </a>
+                                                        <span className="sm:hidden">{emailCopied ? 'Copied' : 'Copy'}</span>
+                                                        <span className="hidden sm:inline">{emailCopied ? 'Copied!' : 'Copy Email'}</span>
+                                                    </button>
                                                 </div>
                                             </div>
                                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
