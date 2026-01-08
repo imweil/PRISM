@@ -3,7 +3,6 @@
   author = {Chen, Wei and Li, Yafei and Mei, Baolong and Zhu, Guanglei and Wu, Jiaqi and Xu, Mingliang},
   booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence},
   publisher = {International Joint Conferences on Artificial Intelligence Organization},
-  editor = {James Kwok},
   pages = {4119--4127},
   year = {2025},
   month = {8},
@@ -14,7 +13,8 @@
   abbr = {IJCAI'25},
   rank = {CCF-A},
   description = {We propose CAFE, a multi-agent RL framework for spatial crowdsourcing that addresses delayed rewards and non-stationary distributions through credit assignment mechanisms and adaptive fine-tuning, achieving superior task completion and equitable reward distribution.},
-  keywords={Optimization, Scheduling, Reinforcement Learning, Meta Learning, Spatial Crowdsourcing}
+  keywords={Optimization, Scheduling, Reinforcement Learning, Meta Learning, Spatial Crowdsourcing},
+  code={https://github.com/imweil/csc},
 }
 
 @inproceedings{li2025gradient,
@@ -30,14 +30,15 @@
   url={https://ojs.aaai.org/index.php/AAAI/article/view/33566},
   abstract={Dependency-aware spatial crowdsourcing (DASC) addresses the unique challenges posed by subtask dependencies in spatial task assignment. This paper investigates the task assignment problem in DASC and proposes a two-stage Recommend and Match Optimization (RMO) framework, leveraging multi-agent reinforcement learning for subtask recommendation and a multi-dimensional utility function for subtask matching. The RMO framework primarily addresses two key challenges: credit assignment for subtasks with interdependencies and maintaining overall coherence between subtask recommendation and matching. Specifically, we employ meta-gradients to construct auxiliary policies and establish a gradient connection between two stages, which can effectively address credit assignment and joint optimization of subtask recommendation and matching, while concurrently accelerating network training. We further establish a unified gradient descent process through gradient synchronization across recommendation networks, auxiliary policies, and the matching utility evaluation function. Experiments on two real-world datasets validate the effectiveness and feasibility of our proposed approach.}, 
   selected={true},
-  reward = {🗣️ Oral Presentation;📊 Score: 7,7,8},
+  reward = {🏆 Oral Presentation},
   abbr = {AAAI'25},
   rank = {CCF-A},
   description = {We propose RMO, a two-stage framework for dependency-aware spatial crowdsourcing that uses
                             multi-agent RL for subtask recommendation and utility-based matching, employing
                             meta-gradients and gradient synchronization to address credit assignment and joint
                             optimization challenges.},
-  keywords={Optimization, Scheduling, Reinforcement Learning, Meta Learning, Spatial Crowdsourcing}
+  keywords={Optimization, Scheduling, Reinforcement Learning, Meta Learning, Spatial Crowdsourcing},
+  code={https://github.com/imweil/dasc},
 }
 
 @inproceedings{li2025effective,
@@ -71,6 +72,7 @@
   publisher={VLDB Endowment},
   abstract={Top-k Publish/Subscribe (TkPS) service is widely studied in spatial database, with various cache-based methods proposed to address its efficiency challenge in top-k result maintenance. These methods require in-depth exploration of relationships between cache updates and different factors (e.g., data distribution) to optimize cache performance. However, there is currently no system available that assists developers in conducting comprehensive cache analyses within TkPS services. We therefore introduce Catcher, a multi-functional cache analysis system designed for TkPS services. It not only enables users to intuitively analyze the entire maintenance process of top-k results but also aids in identifying bottlenecks and potential optimization spaces of caches. Catcher provides two user-friendly interfaces that allow users to employ simple and easy-to-use consoles to perform statistical analysis. Furthermore, Catcher offers the real-time evaluation of cache-based methods, providing users with instant analysis. We have demonstrated the usability of Catcher on real-world datasets. A short video of our demonstration can be found at https://youtu.be/qI81HoypB0w},
   keywords = {System, Spatial Crowdsourcing},
+  doi= {10.14778/3685800.3685882},
   description = {We introduce Catcher, a multi-functional cache analysis system for Top-k Publish/Subscribe
                             services that enable intuitive analysis of cache performance, bottleneck identification,
                             and real-time evaluation through user-friendly interfaces.},

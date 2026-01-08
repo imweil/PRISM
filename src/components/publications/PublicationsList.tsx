@@ -11,7 +11,11 @@ import {
     ClipboardDocumentIcon,
     DocumentTextIcon,
     StarIcon,
-    TagIcon  
+    TagIcon,
+    DocumentMagnifyingGlassIcon,
+    NewspaperIcon,
+    WrenchScrewdriverIcon,
+    CodeBracketIcon,
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
@@ -260,26 +264,6 @@ export default function PublicationsList({ config, publications, embedded = fals
 
                                     {/* DOI, Code, Abstract, BibTeX, Abbreviation (abbr) in the same row */}
                                     <div className="flex flex-wrap gap-2 mt-auto">
-                                        {pub.doi && (
-                                            <a
-                                                href={`https://doi.org/${pub.doi}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
-                                            >
-                                                DOI
-                                            </a>
-                                        )}
-                                        {pub.code && (
-                                            <a
-                                                href={pub.code}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
-                                            >
-                                                Code
-                                            </a>
-                                        )}
                                         {pub.abstract && (
                                             <button
                                                 onClick={() => setExpandedAbstractId(expandedAbstractId === pub.id ? null : pub.id)}
@@ -290,9 +274,53 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                         : "bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white"
                                                 )}
                                             >
-                                                <DocumentTextIcon className="h-3 w-3 mr-1.5" />
+                                                <NewspaperIcon className="h-3 w-3 mr-1.5" />
                                                 Abstract
                                             </button>
+                                        )}
+                                        {pub.doi && (
+                                            <a
+                                                href={`https://doi.org/${pub.doi}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
+                                            >
+                                                <DocumentTextIcon className="h-3 w-3 mr-1.5" />
+                                                Paper
+                                            </a>
+                                        )}
+                                        {pub.arxiv && (
+                                            <a
+                                                href={pub.arxiv}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
+                                            >
+                                                <DocumentMagnifyingGlassIcon className="h-3 w-3 mr-1.5" />
+                                                Arxiv
+                                            </a>
+                                        )}
+                                        {pub.code && (
+                                            <a
+                                                href={pub.code}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
+                                            >
+                                                <CodeBracketIcon className="h-3 w-3 mr-1.5" />
+                                                Code
+                                            </a>
+                                        )}
+                                        {pub.project && (
+                                            <a
+                                                href={pub.project}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
+                                            >
+                                                <WrenchScrewdriverIcon className="h-3 w-3 mr-1.5" />
+                                                Project
+                                            </a>
                                         )}
                                         {pub.bibtex && (
                                             <button

@@ -33,6 +33,8 @@ export interface Publication {
   reward?: string;
   abbr?: string;
   rank?: string;
+  arxiv?: string;
+  project?: string;
   type: PublicationType;
   status: PublicationStatus;
   citations?: number;
