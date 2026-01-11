@@ -3,9 +3,14 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Artificial Intelligence",
-  "Large Language Models",
-  "Reinforcement Learning",
+  "Large Language Models:",
+  "-- Learning and Adaptation",
+  "-- Alignment and Preference Learning",
+  "-- Reasoning and Generalization",
+  "Reinforcement Learning:",
+  "-- Multi-Agent Reinforcement Learning",
+  "-- Policy Optimization",
+  "-- Credit Assignment and Learning Dynamics",
 ]
 
 [[sections]]

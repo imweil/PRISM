@@ -2,15 +2,15 @@
 ## 🎓 Education
 
 **Nanjing University**, Ph.D. in Computer Science and Technology, *2026 - 2030*
-- Research focus: Large Languahe Models
+- Research focus: Alignment and Optimization of Large Language Models
 - Supervisor: Prof. [Guanghui Zhu](https://cs.nju.edu.cn/zgh/)
 
 **Zhengzhou University**, M.Sc. in Software Engineering, *2022 - 2025*
-- Research focus: Spatiotemporal Big Data and Smart Logistics
+- Research focus: Spatiotemporal Data Analytics and Optimization for Smart Logistics
 - Supervisor: Prof. [Yafei Li](https://zzudb.github.io)
 
-**Zhengzhou University**, B.Sc. in Mechanical Engineering, *2018 - 2022*
+**Zhengzhou University**, B.Eng. in Mechanical Engineering, *2018 - 2022*
 - Minor in Business Administration
 
-## 📄 Full CV
-You can view my full CV by clicking [HERE](https://files.chenw.me/chenwei_cv.pdf).
+## 📄 Curriculum Vitae
+[View CV](https://files.chenw.me/chenwei_cv.pdf)
