@@ -10,7 +10,6 @@ research_interests = [
   "Reinforcement Learning:",
   "-- Multi-Agent Reinforcement Learning",
   "-- Policy Optimization",
-  "-- Credit Assignment and Learning Dynamics",
 ]
 
 [[sections]]
