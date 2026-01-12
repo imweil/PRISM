@@ -13,4 +13,4 @@
 - Minor in Business Administration
 
 ## 📄 Curriculum Vitae
-[View CV](https://files.chenw.me/chenwei_cv.pdf)
+[View CV](https://files.chenw.me/cv.pdf)
