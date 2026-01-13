@@ -62,7 +62,7 @@ href = "/publications"
 # href = "/services"
 
 [[navigation]]
-title = "Resume"
+title = "CV"
 type = "page"
-target = "resume"
- href = "/resume"
+target = "cv"
+ href = "/cv"

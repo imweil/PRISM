@@ -1,5 +1,5 @@
 
-## 🎓 Education
+## Education
 
 **Nanjing University**, Ph.D. in Computer Science and Technology, *2026 - 2030*
 - Research focus: Alignment and Optimization of Large Language Models
@@ -12,5 +12,5 @@
 **Zhengzhou University**, B.Eng. in Mechanical Engineering, *2018 - 2022*
 - Minor in Business Administration
 
-## 📄 Curriculum Vitae
-[View CV](https://files.chenw.me/cv.pdf)
+## Full CV
+[CV (PDF)](https://files.chenw.me/cv.pdf)
